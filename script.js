@@ -1,15 +1,13 @@
 let search = document.querySelector("#search");
-let searchBtn = document.querySelector("#search-btn");
 let weatherData = document.querySelector("#weatherData");
 const apiKey = "074e3cf34f29d282a0d174bf7f90581b";
-searchBtn.addEventListener("click", weatherDetails);
 search.addEventListener("keyup", weatherDetails);
 function weatherDetails() {
     if (search.value.trim() === "") {
-        weatherData.innerHTML=`<div id="error">Please Enter City Name</div>`;
+        weatherData.innerHTML = `<div id="error">Please Enter City Name</div>`;
     }
     else {
-        // search.value = search.value.split(" ").join();
+
         let city = search.value;
         const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
 
