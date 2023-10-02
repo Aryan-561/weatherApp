@@ -6,7 +6,7 @@ searchBtn.addEventListener("click", weatherDetails);
 search.addEventListener("keyup", weatherDetails);
 function weatherDetails() {
     if (search.value.trim() === "") {
-        alert("Please enter city name ");
+        weatherData.innerHTML=`<div id="error">Please Enter City Name</div>`;
     }
     else {
         // search.value = search.value.split(" ").join();
